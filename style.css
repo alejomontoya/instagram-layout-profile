@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 44px; 
+}
+.profile-photo {
+    cursor: pointer;
+    text-align: center;
+    width: 300px;
+}
+.profile-photo img {
+    border-radius: 50%;
+}
+.username {
+    display: flex;
+}
+.username h1 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-right: 4px;
+    font-weight: lighter;
+}
+.follows span {
+    font-size: 16px;
+    margin-right: 40px;
+    line-height: 32px;
+}
+.about-me {
+    margin-top: 1em;
+    line-height: 24px;
+}
+.about-me .name {
+    font-size: 16px;
+    margin: 0;
+}
+.edit-profile {
+    background-color: transparent;
+    border: 1px solid #dbdbdb;
+    border: 1px solid rgba(var(--ca6,219,219,219),1);
+    color: #262626;
+    color: rgba(var(--f75,38,38,38),1);
+    height: 30px;
+    align-self: center;
+}
+.post-list {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(100px, 293px));     
+   justify-content: center;
+   grid-gap: 28px;
+}
+.post {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+.post-image, .profile-photo {
+    margin: 0;
+}
+.post-image img {
+    width: 100%;
+    vertical-align: top;
+}
+.post-overlay {
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.post:hover .post-overlay {
+    display: flex;
+}
+
+.post-likes, 
+.post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) { 
+    .post-list {
+        grid-gap: 3px;
+    }
+}
